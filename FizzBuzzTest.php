@@ -21,6 +21,11 @@ class FizzBuzzTest extends PHPUnit_Framework_TestCase {
     $actual = $this->fizzBuzz->getString(3);
     $this->assertEquals('Fizz',$actual);
   }
+
+  function testFizzBuzzWith5ShouldBeReturnBuzz(){
+    $actual = $this->fizzBuzz->getString(5);
+    $this->assertEquals('Buzz',$actual);
+  }
 }
 
 ?>
