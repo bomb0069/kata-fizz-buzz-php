@@ -3,7 +3,8 @@
 class FizzBuzz {
 
     function getString($input) {
-        return '1';
+        return $input;
+
     }
 }
 

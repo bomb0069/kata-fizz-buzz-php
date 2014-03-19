@@ -3,15 +3,24 @@ require_once ('FizzBuzz.php');
 
 class FizzBuzzTest extends PHPUnit_Framework_TestCase {
 
-	function testFizzBuzzWith1ShouldBeReturn1() {
-		$fizzBuzz = new FizzBuzz();
-		$this->assertEquals('1', $fizzBuzz->getString(1));
+  function setUp(){
+    $this->fizzBuzz = new FizzBuzz();
+  }
+
+  function testFizzBuzzWith1ShouldBeReturn1() {
+    $actual = $this->fizzBuzz->getString(1);
+		$this->assertEquals('1', $actual);
 	}
 
-	function testFizzBuzzWith2ShouldBeReturn2() {
-		$fizzBuzz = new FizzBuzz();
-		$this->assertEquals('2', $fizzBuzz->getString(2));
-	}
+  function testFizzBuzzWith2ShouldBeReturn2() {
+    $actual = $this->fizzBuzz->getString(2);
+		$this->assertEquals('2', $actual);
+  }
+
+  function testFizzBuzzWith3ShouldBeReturnFizz(){
+    $actual = $this->fizzBuzz->getString(3);
+    $this->assertEquals('Fizz',$actual);
+  }
 }
 
 ?>
