@@ -7,6 +7,11 @@ class FizzBuzzTest extends PHPUnit_Framework_TestCase {
 		$fizzBuzz = new FizzBuzz();
 		$this->assertEquals('1', $fizzBuzz->getString(1));
 	}
+
+	function testFizzBuzzWith2ShouldBeReturn2() {
+		$fizzBuzz = new FizzBuzz();
+		$this->assertEquals('2', $fizzBuzz->getString(2));
+	}
 }
 
 ?>
