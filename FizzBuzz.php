@@ -3,8 +3,9 @@
 class FizzBuzz {
 
     function getString($input) {
-        return $input;
-
+    	if ($input == 3)
+    		return 'Fizz';
+    	return $input;
     }
 }
 
